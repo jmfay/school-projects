@@ -1,60 +1,42 @@
 ### Assessment for Lab 01
 
-#### Total score: _0_ / _100_
+#### Total score: _100_ / _100_
 
-Run on September 06, 10:28:00 AM.
+Run on September 10, 06:17:14 AM.
 
 
 #### Necessary Files and Structure
 
-+  _0_ / _30_ : Fail: Check that directory "labs" exists.
++  _30_ / _30_ : Pass: Check that directory "labs" exists.
 
-     "labs" not found.
++  _10_ / _10_ : Pass: Check that directory "labs/lab01_git_basics" exists.
 
-+  _0_ / _10_ : Skip: Check that directory "labs/lab01_git_basics" exists.
-
-  This test was not run because of an earlier failing test.
-
-+  _0_ / _10_ : Skip: Change into directory "labs/lab01_git_basics".
-
-  This test was not run because of an earlier failing test.
++  _10_ / _10_ : Pass: Change into directory "labs/lab01_git_basics".
 
 
 ### Essential Files Exist
 
-+  _0_ / _10_ : Skip: Check that file "makefile" exists.
++  _10_ / _10_ : Pass: Check that file "makefile" exists.
 
-  This test was not run because of an earlier failing test.
-
-+  _0_ / _10_ : Skip: Check that file "main.cc" exists.
-
-  This test was not run because of an earlier failing test.
++  _10_ / _10_ : Pass: Check that file "main.cc" exists.
 
 
 ### .gitignore set up properly
 
-+  _0_ / _5_ : Skip: Check that file/directory "private.pvt" does not exist.
++  _5_ / _5_ : Pass: Check that file/directory "private.pvt" does not exist.
 
-  This test was not run because of an earlier failing test.
++  _5_ / _5_ : Pass: Check that no files with extension ".o" exist in directory "."
 
-+  _0_ / _5_ : Skip: Check that no files with extension ".o" exist in directory "."
++  _5_ / _5_ : Pass: Check that no files with extension ".out" exist in directory "."
 
-  This test was not run because of an earlier failing test.
-
-+  _0_ / _5_ : Skip: Check that no files with extension ".out" exist in directory "."
-
-  This test was not run because of an earlier failing test.
-
-+  _0_ / _5_ : Skip: Check that file "shared.md" exists.
-
-  This test was not run because of an earlier failing test.
++  _5_ / _5_ : Pass: Check that file "shared.md" exists.
 
 
 ### Test that code compiles and creates the exectuable
 
-+  _0_ / _10_ : Skip: Check that make compiles.
++  _10_ / _10_ : Pass: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
-#### Total score: _0_ / _100_
+
+#### Total score: _100_ / _100_
 
