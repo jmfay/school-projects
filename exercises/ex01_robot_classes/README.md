@@ -381,7 +381,7 @@ Position is awkward and prone to error. Let's fix that with a struct definition.
 struct Position {
   int x_;
   int y_;
-  Position(x=0,y=0) : x_(x), y_(y) {}
+  Position(int x=0,int y=0) : x_(x), y_(y) {}
 };
 ```
 
