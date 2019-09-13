@@ -1,50 +1,36 @@
 ### Feedback for Lab 02
 
-Run on September 11, 13:45:36 PM.
+Run on September 13, 13:40:37 PM.
 
 
 #### Necessary Files and Structure
 
 + Pass: Check that directory "labs" exists.
 
-+ Fail: Check that directory "labs/lab02_build_process" exists.
++ Pass: Check that directory "labs/lab02_build_process" exists.
 
-     "labs/lab02_build_process" not found.
-
-+ Skip: Change into directory "labs/lab02_build_process".
-
-  This test was not run because of an earlier failing test.
++ Pass: Change into directory "labs/lab02_build_process".
 
 
 ### Essential Files Exist
 
-+ Skip: Check that file "Makefile" exists.
++ Pass: Check that file "Makefile" exists.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file ".gitignore" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file ".gitignore" exists.
 
 
 ### .gitignore set up properly
 
-+ Skip: Check that no files with extension ".o" exist in directory "."
++ Pass: Check that no files with extension ".o" exist in directory "."
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that no files with extension ".out" exist in directory "."
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that no files with extension ".out" exist in directory "."
 
 
 ### Test that code compiles and creates executable
 
-+ Skip: Check that make compiles.
++ Pass: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check that file "ducks" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "ducks" exists.
 
