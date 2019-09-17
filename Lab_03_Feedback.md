@@ -1,6 +1,6 @@
 ### Feedback for Lab 03
 
-Run on September 16, 22:48:30 PM.
+Run on September 16, 23:01:26 PM.
 
 
 #### Necessary Files and Structure
@@ -42,51 +42,24 @@ Run on September 16, 22:48:30 PM.
 
 #### Test that code compiles and creates the exectuable
 
-+ Fail: Check that make compiles.
-
-    Make compile fails with errors:.
-<pre>g++ -c -Wall main.cc -o main.o
-In file included from main.cc:13:0:
-point2.h:11:2: error: expected ; after class definition
- }
-  ^
-  ;
-main.cc: In function void DisplayQuadrantCount(Point2*):
-main.cc:104:29: error: no matching function for call to Point2::Quadrant()
-     if (cluster[i].Quadrant() == 0)
-                             ^
-In file included from main.cc:13:0:
-point2.h:9:9: note: candidate: int Point2::Quadrant(Point2)
-     int Quadrant(Point2);
-         ^~~~~~~~
-point2.h:9:9: note:   candidate expects 1 argument, 0 provided
-main.cc:107:36: error: no matching function for call to Point2::Quadrant()
-     quad_count[cluster[i].Quadrant()-1]++;
-                                    ^
-In file included from main.cc:13:0:
-point2.h:9:9: note: candidate: int Point2::Quadrant(Point2)
-     int Quadrant(Point2);
-         ^~~~~~~~
-point2.h:9:9: note:   candidate expects 1 argument, 0 provided
-Makefile:10: recipe for target 'main.o' failed
-make: *** [main.o] Error 1
-</pre>
++ Pass: Check that make compiles.
 
 
 
-+ Skip: Check that file "cluster" exists.
++ Pass: Check that file "cluster" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that make compiles for Makefile:Makefile.test.
 
-+ Skip: Check that make compiles for Makefile:Makefile.test.
+    make successful.
+    Check point2_unittest exists...OK: result point2_unittest found
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that a GoogleTest test passes.
+    passes the test: Point2Test.DistBtwnBothPositive.
 
-+ Skip: Check that a GoogleTest test passes.
 
-  This test was not run because of an earlier failing test.
 
-+ Skip: Check that a GoogleTest test passes.
++ Pass: Check that a GoogleTest test passes.
+    passes the test: Point2Test.DistBtwnInverses.
 
-  This test was not run because of an earlier failing test.
+
 
