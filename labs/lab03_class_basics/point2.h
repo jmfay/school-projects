@@ -6,6 +6,6 @@ class Point2{
     public:
     Point2(float _x = 0, float _y = 0);
     float DistanceBetween(Point2);
-    int Quadrant(Point2);
+    int Quadrant();
     void Print();
-}
+};
