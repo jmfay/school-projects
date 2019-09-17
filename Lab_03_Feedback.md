@@ -1,6 +1,6 @@
 ### Feedback for Lab 03
 
-Run on September 13, 13:40:33 PM.
+Run on September 16, 22:48:30 PM.
 
 
 #### Necessary Files and Structure
@@ -22,43 +22,57 @@ Run on September 13, 13:40:33 PM.
 
 + Pass: Check that file ".gitignore" exists.
 
-+ Fail: Check that file "point2.cc" exists.
++ Pass: Check that file "point2.cc" exists.
 
-     "point2.cc" not found.
++ Pass: Check that file "point2.h" exists.
 
-+ Skip: Check that file "point2.h" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "point2_unittest.cc" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "point2_unittest.cc" exists.
 
 
 #### .gitignore set up properly
 
-+ Skip: Check that file/directory "cluster" does not exist.
++ Pass: Check that file/directory "cluster" does not exist.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that file/directory "point2_unittest" does not exist.
 
-+ Skip: Check that file/directory "point2_unittest" does not exist.
++ Pass: Check that no files with extension ".o" exist in directory "."
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that no files with extension ".o" exist in directory "."
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that no files with extension ".out" exist in directory "."
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that no files with extension ".out" exist in directory "."
 
 
 #### Test that code compiles and creates the exectuable
 
-+ Skip: Check that make compiles.
++ Fail: Check that make compiles.
 
-  This test was not run because of an earlier failing test.
+    Make compile fails with errors:.
+<pre>g++ -c -Wall main.cc -o main.o
+In file included from main.cc:13:0:
+point2.h:11:2: error: expected ; after class definition
+ }
+  ^
+  ;
+main.cc: In function void DisplayQuadrantCount(Point2*):
+main.cc:104:29: error: no matching function for call to Point2::Quadrant()
+     if (cluster[i].Quadrant() == 0)
+                             ^
+In file included from main.cc:13:0:
+point2.h:9:9: note: candidate: int Point2::Quadrant(Point2)
+     int Quadrant(Point2);
+         ^~~~~~~~
+point2.h:9:9: note:   candidate expects 1 argument, 0 provided
+main.cc:107:36: error: no matching function for call to Point2::Quadrant()
+     quad_count[cluster[i].Quadrant()-1]++;
+                                    ^
+In file included from main.cc:13:0:
+point2.h:9:9: note: candidate: int Point2::Quadrant(Point2)
+     int Quadrant(Point2);
+         ^~~~~~~~
+point2.h:9:9: note:   candidate expects 1 argument, 0 provided
+Makefile:10: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+</pre>
+
+
 
 + Skip: Check that file "cluster" exists.
 
