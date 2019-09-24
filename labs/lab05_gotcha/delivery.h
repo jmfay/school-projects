@@ -15,6 +15,7 @@ class Delivery {
 public:
   Delivery(std::string package = "Default Package.");
   virtual ~Delivery();
+  Delivery(const Delivery &package);
   virtual void Transport();
   void Deliver();
   static void IncrementCount() { delivery_count_++; }

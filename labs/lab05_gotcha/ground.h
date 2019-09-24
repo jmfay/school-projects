@@ -19,7 +19,7 @@ public:
   ~Ground();
   void Transport();
 private:
-  int days_to_deliver_;
+  int days_to_deliver;
 };
 
 #endif  // GROUND_H_

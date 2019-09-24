@@ -22,15 +22,20 @@ ArrayPointerTest::ArrayPointerTest(int count) {
 
   cout << "Initializing ducks1." << endl;
   // Write code here to create count_ ducks for array ducks1 (if required)
-
   cout << "Initializing ducks2\n" ;
   // Write code here to create count_ ducks for array ducks2 (if required)
-
+  ducks2_ = new Duck[count_];
   cout << "Initializing ducks3\n";
   // Write code here to create count_ ducks for array ducks3 (if required)
-
+  for (int i=0; i<count_;i++){
+    ducks3_[i] = new Duck;
+  }
   cout << "Initializing ducks4\n";
   // Write code here to create count_ ducks for array ducks4 (if required)
+  ducks4_ = new Duck * [count_];
+  for (int i=0; i<count; i++){
+    ducks4_[i] = new Duck;
+  }
 }
 
 void ArrayPointerTest::NameTheDucks(int array_number) {
@@ -50,16 +55,28 @@ void ArrayPointerTest::NameTheDucks(int array_number) {
 
     case 2:
       cout << "Naming ducks2\n";
+      for (int i=0;i<count_;i++) {
+        ducks2_[i].set_name(names[i]);
+        ducks2_[i].set_number(2);
+      }
       // Write code here to name count_ ducks in ducks2 and set array_number_.
       break;
 
     case 3:
       cout << "Naming ducks3\n";
+      for (int i=0;i<count_;i++) {
+        ducks3_[i]->set_name(names[i]);
+        ducks3_[i]->set_number(3);
+      }
       // Write code here to name count_ ducks in ducks3 and set array_number_.
       break;
 
     case 4:
       cout << "Naming ducks4\n";
+      for (int i=0;i<count_;i++) {
+        ducks4_[i]->set_name(names[i]);
+        ducks4_[i]->set_number(4);
+      }
       // Write code here to name count_ ducks in ducks4 and set array_number_.
       break;
 
@@ -83,12 +100,19 @@ ArrayPointerTest::~ArrayPointerTest() {
 
   cout << "Deleting ducks2\n";
   // Write code here to delete the ducks of ducks2_ (if required)
+  delete[] ducks2_;
 
   cout << "Deleting ducks3\n";
   // Write code here to delete the ducks of ducks2_ (if required)
-
+  for (int i=0; i<count_; i++){
+    delete ducks3_[i];
+  }
   cout << "Deleting ducks4\n";
   // Write code here to delete the ducks of ducks2_ (if required)
+  for (int i=0;i<count_;i++){
+    delete ducks4_[i];
+  }
+  delete[] ducks4_;
 }
 
 
@@ -99,7 +123,7 @@ void ArrayPointerTest::DisplayContents() {
   for (int i=0; i<count_; i++) {
     ducks1_[i].PerformQuack();
   }
-  /*
+
   cout << "ducks2" << endl;
   for (int i=0; i<count_; i++) {
     ducks2_[i].PerformQuack();
@@ -114,5 +138,5 @@ void ArrayPointerTest::DisplayContents() {
   for (int i=0; i<count_; i++) {
     ducks4_[i]->PerformQuack();
   }
-  */
+
 }
