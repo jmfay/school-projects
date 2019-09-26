@@ -1,6 +1,6 @@
 ### Feedback for Lab 06
 
-Run on September 25, 20:07:14 PM.
+Run on September 26, 08:24:10 AM.
 
 
 #### System Files and Lab Directory Structure
@@ -57,30 +57,6 @@ Run on September 25, 20:07:14 PM.
 
 
 #### Results
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that a GoogleTest test passes.
-
-  This test was not run because of an earlier failing test.
 
 + Skip: Check that a GoogleTest test passes.
 
