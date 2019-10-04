@@ -50,7 +50,6 @@ Date::Date(int epoch) {
 * Adding days to the date.
 * param [in] rhs: right hand side of this+rhs
 * param [out] New Date object representing the date which is "days" number of days after the date currently stored
-* MUTATION : THIS VERSION DOES NOT TAKE LEAP YEAR INTO ACCOUNT
 **/
 Date Date::operator+(int days) const {
   int old_date = ConvertToDays(yyyy_, mm_, dd_);
