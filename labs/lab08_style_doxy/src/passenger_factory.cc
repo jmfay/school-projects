@@ -25,7 +25,7 @@ std::uniform_int_distribution<std::mt19937::result_type> dist(1, 1000);
 // example from the forum I used this code to generate male and female names,
 // but here I combined them).
 
-static const std::string NamePrefixArray[] = {
+static const char NamePrefixArray[] = {
 "",  // who said we need to add a prefix?
 "bel",  // lets say that means "the good"
 "nar",  // "The not so good as Bel"
@@ -35,14 +35,14 @@ static const std::string NamePrefixArray[] = {
 "ev",  // Man am I original
 };
 
-static const std::string NameSuffixArray[] = {
+static const char NameSuffixArray[] = {
 "", "us", "ix", "ox", "ith",
 "ath", "um", "ator", "or", "axia",
 "imus", "ais", "itur", "orex", "o",
 "y"
 };
 
-static const std::string NameStemsArray[] = {
+static const char NameStemsArray[] = {
 "adur", "aes", "anim", "apoll", "imac",
 "educ", "equis", "extr", "guius", "hann",
 "equi", "amora", "hum", "iace", "ille",
@@ -55,10 +55,9 @@ static const std::string NameStemsArray[] = {
 // Code for name generation adapted from:
 // https://www.dreamincode.net/forums/topic/27024-data-modeling-for-games-in-c-part-ii/
 Passenger * PassengerFactory::Generate(int curr_stop, int last_stop) {
-
   std::string new_name = NameGeneration();
 
-  //common use of random integer generation to determine
+  // common use of random integer generation to determine
   //  what stop the passenger will depart the bus
 
   int destination = (dist(e) % (last_stop - curr_stop)) + curr_stop + 1;
@@ -68,7 +67,8 @@ Passenger * PassengerFactory::Generate(int curr_stop, int last_stop) {
 
 std::string PassengerFactory::NameGeneration() {
   // assume rand is seeded
-  std::string name = std::string (NamePrefixArray[(dist(e) % 7)]) + std::string (NameStemsArray[(dist(e) % 20)])
+  std::string name = std::string(NamePrefixArray[(dist(e) % 7)]) +
+  std::string(NameStemsArray[(dist(e) % 20)])
   + std::string(NameSuffixArray[(dist(e) % 16)]);
   name[0] = toupper(name[0]);  // don't forget to capitalize!
   return name;

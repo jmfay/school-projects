@@ -1,0 +1,5 @@
+# Ignore html folder
+/docs/html
+
+# Ignore latex folder
+/docs/latex
