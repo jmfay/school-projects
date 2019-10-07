@@ -1,72 +1,44 @@
 ### Style Feedback for Lab 08
 
-Run on October 07, 12:39:04 PM.
+Run on October 07, 14:09:45 PM.
 
 
 #### Necessary Files and Structure
 
-+ Fail: Check that directory "cpplint" exists.
++ Pass: Check that directory "cpplint" exists.
 
-     "cpplint" not found.
++ Pass: Check that directory "labs" exists.
 
-+ Skip: Check that directory "labs" exists.
++ Pass: Check that directory "labs/lab08_style_doxy" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Change into directory "labs/lab08_style_doxy".
 
-+ Skip: Check that directory "labs/lab08_style_doxy" exists.
++ Pass: Check that directory "docs" exists.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Change into directory "labs/lab08_style_doxy".
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that directory "docs" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "docs/Doxyfile" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "docs/Doxyfile" exists.
 
 
 #### .gitignore configured properly
 
-+ Skip: Check that file/directory "html" does not exist.
++ Pass: Check that file/directory "html" does not exist.
 
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file/directory "latex" does not exist.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file/directory "latex" does not exist.
 
 
 #### Google Style Compliance I
 
-+ Skip: Cpplint checking for for Google C++ compliance
-
-  This test was not run because of an earlier failing test.
++ Pass: Cpplint checking for for Google C++ compliance
 
 
 #### Doxygen
 
-+ Skip: Change into directory "docs".
++ Pass: Change into directory "docs".
 
-  This test was not run because of an earlier failing test.
++ Pass: Generating documentation by running doxygen
 
-+ Skip: Generating documentation by running doxygen
++ Pass: Check that file "../src/mainpage.h" exists.
 
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "html/classPassenger.html" exists.
 
-+ Skip: Check that file "../src/mainpage.h" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "html/classPassenger.html" exists.
-
-  This test was not run because of an earlier failing test.
-
-+ Skip: Check that file "html/classPassengerFactory.html" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "html/classPassengerFactory.html" exists.
 
