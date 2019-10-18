@@ -1,15 +1,13 @@
 ### Feedback for Lab 10
 
-Run on October 18, 16:58:10 PM.
+Run on October 18, 17:10:19 PM.
 
 
 ### Necessary Files and Structure
 
 + Pass: Check that directory "labs" exists.
 
-+ Fail: Check that directory "labs/lab10_advanced_git" exists.
-
-     "labs/lab10_advanced_git" not found.
++ Pass: Check that directory "labs/lab10_advanced_git" exists.
 
 
 ### Git Usage
