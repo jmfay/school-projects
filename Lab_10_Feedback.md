@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on October 18, 09:15:03 AM.
+Run on October 18, 10:32:23 AM.
 
 
 ### Necessary Files and Structure
@@ -10,10 +10,6 @@ Run on October 18, 09:15:03 AM.
 + Fail: Check that directory "labs/lab10_advanced_git" exists.
 
      "labs/lab10_advanced_git" not found.
-
-+ Skip: Check that directory "project" exists.
-
-  This test was not run because of an earlier failing test.
 
 
 ### Git Usage
@@ -75,6 +71,10 @@ Run on October 18, 09:15:03 AM.
 </pre>
 
 
+
++ Skip: Check that directory "project" exists.
+
+  This test was not run because of an earlier failing test.
 
 + Skip: Change into directory "project".
 
