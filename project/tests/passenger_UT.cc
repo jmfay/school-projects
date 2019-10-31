@@ -1,3 +1,4 @@
+// Copyright 2019 fayxx092
 /* STUDENTS: YOU MUST ADD YOUR PASSENGER UNIT TESTS TO THIS FILE. FORMAT YOUR
  * TESTS TO FIT THE SPECIFICATIONS GIVEN BY THE TESTS PROVIDED IN THIS FILE.
  *
@@ -17,21 +18,22 @@
 /******************************************************
 * TEST FEATURE SetUp
 *******************************************************/
-
 class PassengerTests : public ::testing::Test {
+ protected:
+    Passenger* passenger;
+    Passenger* waitPassenger;
 
-	protected:
-  	
-  	Passenger* passenger;
-  	
-	virtual void SetUp() {
-    	passenger = new Passenger();
-  	}
+  virtual void SetUp() {
+    passenger = new Passenger();
+    waitPassenger = new Passenger();
+		passenger3 = new Passenger();
+    }
 
-  	virtual void TearDown() {
-    	delete passenger;
-  	}
-
+  virtual void TearDown() {
+    delete passenger;
+    delete waitPassenger;
+		delete passenger3;
+    }
 };
 
 
@@ -40,8 +42,30 @@ class PassengerTests : public ::testing::Test {
  ******************************************************************************/
 
 TEST_F(PassengerTests, Constructor) {
-  	EXPECT_EQ(passenger->IsOnBus(), false);
-  	passenger->GetOnBus();
-  	EXPECT_EQ(passenger->IsOnBus(), true);
-};
+    EXPECT_EQ(passenger->IsOnBus(), false);
+    passenger->GetOnBus();
+    EXPECT_EQ(passenger->IsOnBus(), true);
+}
 
+
+TEST_F(PassengerTests, stopIdTest) {
+    EXPECT_EQ(passenger->GetDestination(), -1);
+}
+
+TEST_F(PassengerTests, updateTest) {
+    waitPassenger.Update();
+    waitPassenger.Update();
+    waitPassenger.GetOnBus();
+    waitPassenger.Update();
+    EXPECT_EQ(waitPassenger.GetTotalWait(), 3);
+}
+
+TEST_F(PassengerTests, TotalWaitTest) {
+	passenger3.Update();
+	passenger3.Update();
+	passenger3.Update();
+	passenger3.Update();
+	passenger3.GetOnBus();
+	passenger3.Update();
+	EXPECT_EQ(passenger3.GetTotalWait(), 5);
+}
