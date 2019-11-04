@@ -1,42 +1,52 @@
+// Copyright 2019 fayxx092
 #include <iostream>
 #include <vector>
 
-#include "stop.h"
+#include "src/stop.h"
 
-Stop::Stop(int id, double longitude, double latitude) : id_(id), longitude_(longitude), latitude_(latitude) { //Defaults to Westbound Coffman Union stop
+Stop::Stop(int id, double longitude, double latitude) : id_(id),
+ longitude_(longitude), latitude_(latitude) {  // Defaults to
+  // Westbound Coffman Union stop
   // no initialization of list of passengers necessary
 }
 
 void Stop::LoadPassengers(Bus * bus) {
-		while(!(passengers_.empty())){
-			passengers_.front()->GetOnBus();
-			bus->LoadPassenger(passengers_.front());
-			passengers_.pop_front();
-		}
-	  //loading some passengers onto a bus
-}
+    // loading some passengers onto a bus while passengers still at stop
+    while (!(passengers_.empty())) {
+      // double checks to make sure bus isn't full (returns false if at
+      // max capacity)
+      if (bus->LoadPassenger(passengers_.front())) {
+        passengers_.front()->GetOnBus();
+        passengers_.pop_front();
+      } else {
+          return;
+      }
+    }
+  }
 
 
 int Stop::AddPassengers(Passenger * pass) {
-	  //add the passenger to the stop
-		passengers_.push_back(pass);
+    // add the passenger to the stop
+    passengers_.push_back(pass);
     return 1;
 }
 
 void Stop::Update() {
-  for (std::list<Passenger *>::iterator it = passengers_.begin(); it != passengers_.end(); it++) {
+  for (std::list<Passenger *>::iterator it = passengers_.begin(); it !=
+    passengers_.end(); it++) {
     (*it)->Update();
   }
 }
 
-int Stop::GetId() const{
+int Stop::GetId() const {
   return id_;
 }
 
 void Stop::Report() const {
   std::cout << "ID: " << id_ << std::endl;
   std::cout << "Passengers waiting: " << passengers_.size() << std::endl;
-  for(std::list<Passenger *>::const_iterator it = passengers_.begin(); it != passengers_.end(); it++) {
+  for (std::list<Passenger *>::const_iterator it = passengers_.begin();
+  it != passengers_.end(); it++) {
     (*it)->Report();
   }
 }
