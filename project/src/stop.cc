@@ -7,8 +7,20 @@ Stop::Stop(int id, double longitude, double latitude) : id_(id), longitude_(long
   // no initialization of list of passengers necessary
 }
 
+void Stop::LoadPassengers(Bus * bus) {
+		while(!(passengers_.empty())){
+			passengers_.front()->GetOnBus();
+			bus->LoadPassenger(passengers_.front());
+			passengers_.pop_front();
+		}
+	  //loading some passengers onto a bus
+}
+
+
 int Stop::AddPassengers(Passenger * pass) {
-  return 0;
+	  //add the passenger to the stop
+		passengers_.push_back(pass);
+    return 1;
 }
 
 void Stop::Update() {

@@ -24,11 +24,12 @@ void Passenger::Update() {
   }
 }
 
+//method assumes update will be called during the same frame GetOnBusis called
 void Passenger::GetOnBus() {
   time_on_bus_ = 1;
   // prevents doubling of wait time at instance where passenger is at stop then
   // gets on bus
-  if(wait_at_stop_ > 0){
+  if(wait_at_stop_ >= 0){
   wait_at_stop_--;
   }
 }

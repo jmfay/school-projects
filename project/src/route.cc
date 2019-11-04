@@ -1,13 +1,13 @@
 #include "route.h"
 
-Route::Route(std::string name, Stop ** stops, double * distances, int num_stops) {
+Route::Route(std::string name, Stop ** stops, double * distances, int num_stops, PassengerGenerator * pg) {
   for (int i = 0; i < num_stops; i++) {
     stops_.push_back(stops[i]);
   }
   for (int i = 0; i < num_stops - 1; i++) {
     distances_between_.push_back(distances[i]);
   }
-  
+
   name_ = name;
   num_stops_ = num_stops;
 }

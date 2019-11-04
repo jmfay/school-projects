@@ -24,6 +24,7 @@ class Bus {
   Bus(std::string name, Route * out, Route * in, int capacity = 60,
                                                  double speed = 1);
   bool LoadPassenger(Passenger *);  // returning revenue delta
+  bool IsTripComplete();
   bool Move();
   void Update();
   void Report();

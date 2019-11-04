@@ -3,7 +3,7 @@
  *
  * @copyright 2019 3081 Staff, All rights reserved.
  */
- 
+
 #ifndef SRC_STOP_H_
 #define SRC_STOP_H_
 
@@ -20,7 +20,8 @@ class Stop {
   explicit Stop(int, double = 44.973723, double = -93.235365);
   // Adding passengers to the stop (from the generator)
   int GetId() const;
-  int AddPassengers(Passenger *);  
+  void LoadPassengers(Bus *);
+  int AddPassengers(Passenger *);
   void Update();
   void Report() const;
 

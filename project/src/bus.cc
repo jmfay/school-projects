@@ -11,6 +11,10 @@ Bus::Bus(std::string name, Route * out, Route * in, int capacity, double speed) 
 
 
 bool Bus::LoadPassenger(Passenger * new_passenger) {
+  if (passengers_.size() == passenger_max_capacity_){
+    return false;
+  }
+  passengers_.push_back(new_passenger);
   return true;
 }
 
@@ -18,6 +22,9 @@ bool Bus::Move() {
 	return true;
 }
 
+bool Bus::IsTripComplete(){
+  return false;
+}
 //bool Refuel() {
 //  //This may become more complex in the future
 //  fuel_ = max_fuel_;

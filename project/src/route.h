@@ -15,6 +15,7 @@
 #include "./stop.h"
 
 class PassengerGenerator;
+class Stop;
 
 class Route {
  public:
@@ -22,7 +23,7 @@ class Route {
         PassengerGenerator *);
   Route * Clone();
   void Update();
-  void Report(std::ostream&);
+  void Report(/*std::ostream&*/);
   //bool IsAtEnd() const;
   //void NextStop();  // Change destination_stop_ to next stop
   //Stop * GetDestinationStop() const;    // Get pointer to next stop
@@ -40,4 +41,3 @@ class Route {
   // double trip_time_; // derived data - total distance travelled on route
 };
 #endif  // SRC_ROUTE_H_
-
