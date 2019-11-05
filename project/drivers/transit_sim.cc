@@ -156,7 +156,7 @@ int main() {
       cc2_counter++;
       CC2_EB = Route("Campus Connector 1- Eastbound", CC_EB_stops, CC_EB_distances, 6, &CC_EB_generator);
       CC2_WB = Route("Campus Connector 1- Westbound", CC_WB_stops, CC_WB_distances, 6, &CC_WB_generator);
-      campus_connector1 = Bus(std::to_string(cc2_counter), &CC2_EB, &CC2_WB, 60, 1);
+      campus_connector2 = Bus(std::to_string(cc2_counter), &CC2_EB, &CC2_WB, 60, 1);
     }
 
     std::cout  << "\t*** Bus Reports ***" << std::endl << std::endl;

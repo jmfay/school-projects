@@ -19,7 +19,11 @@ bool Bus::LoadPassenger(Passenger * new_passenger) {
 }
 
 bool Bus::Move() {
-	return true;
+  if (distance_remaining_ <= 0) {
+    return false;
+  }
+  distance_remaining_ -= speed_;
+  return true;
 }
 
 bool Bus::IsTripComplete(){
@@ -31,7 +35,10 @@ bool Bus::IsTripComplete(){
 //}
 
 void Bus::Update() { //using common Update format
-  Move();
+  for (std::list<Passenger *>::iterator it = passengers_.begin();
+  it != passengers_.end(); it++) {
+    (*it)->Update();
+  }
 }
 
 void Bus::Report(std::ostream& out) {
