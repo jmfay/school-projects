@@ -24,18 +24,12 @@ void Passenger::Update() {
   }
 }
 
-//method assumes update will be called during the same frame GetOnBusis called
 void Passenger::GetOnBus() {
+  // attributing the timestep where passenger is getting on bus to time_on_bus_
   time_on_bus_ = 1;
-  // prevents doubling of wait time at instance where passenger is at stop then
-  // gets on bus
-  if(wait_at_stop_ >= 0){
-  wait_at_stop_--;
-  }
 }
 
 int Passenger::GetTotalWait() const {
-  // -1 accounts for the setting of time_on_bus_ to 1 initially
   return (wait_at_stop_ + time_on_bus_);
 }
 
