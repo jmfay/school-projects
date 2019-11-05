@@ -10,12 +10,18 @@ Route::Route(std::string name, Stop ** stops, double * distances, int num_stops,
 
   name_ = name;
   num_stops_ = num_stops;
+  generator_ = pg;
 }
 
 void Route::Update() {
   for( std::list<Stop *>::iterator it = stops_.begin(); it != stops_.end(); it++) {
     (*it)->Update();
   }
+  generator_->GeneratePassengers();
+}
+
+Route* Route::Clone(){
+  return new Route(*this);
 }
 
 void Route::Report(std::ostream& out) {
