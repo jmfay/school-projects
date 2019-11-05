@@ -18,12 +18,12 @@ void Route::Update() {
   }
 }
 
-void Route::Report() {
-  std::cout << "Name: " << name_ << std::endl;
-  std::cout << "Num stops: " << num_stops_ << std::endl;
+void Route::Report(std::ostream& out) {
+  out << "Name: " << name_ << std::endl;
+  out << "Num stops: " << num_stops_ << std::endl;
   int stop_counter = 0;
   for(std::list<Stop *>::const_iterator it = stops_.begin(); it != stops_.end(); it++) {
-    (*it)->Report();
+    (*it)->Report(out);
     stop_counter++;
   }
 }

@@ -123,19 +123,19 @@ int main() {
 
   std::cout << "/*\n *\n * Initial Report\n *\n*/" << std::endl;
   std::cout  << "\t*** Bus Reports ***" << std::endl << std::endl;
-  campus_connector1.Report(/*std::cout*/);
-  campus_connector2.Report(/*std::cout*/);
+  campus_connector1.Report(std::cout);
+  campus_connector2.Report(std::cout);
 
   std::cout  << std::endl << "\t*** Stop Reports ***" << std::endl << std::endl;
   std::cout  << std::endl << "\t\t ~ Eastbound ~ " << std::endl << std::endl;
 
   for(std::list<Stop *>::const_iterator it = CC_EB_stops_list.begin(); it != CC_EB_stops_list.end(); it++) {
-    (*it)->Report(/*std::cout*/);
+    (*it)->Report(std::cout);
   }
 
   std::cout  << std::endl << "\t\t ~ Westbound ~ " << std::endl << std::endl;
   for(std::list<Stop *>::const_iterator it = CC_WB_stops_list.begin(); it != CC_WB_stops_list.end(); it++) {
-    (*it)->Report(/*std::cout*/);
+    (*it)->Report(std::cout);
   }
 
   for (int i = 0; i < rounds; i++) {
@@ -160,19 +160,19 @@ int main() {
     }
 
     std::cout  << "\t*** Bus Reports ***" << std::endl << std::endl;
-    campus_connector1.Report(/*std::cout*/);
-    campus_connector2.Report(/*std::cout*/);
+    campus_connector1.Report(std::cout);
+    campus_connector2.Report(std::cout);
 
     std::cout  << std::endl << "\t*** Stop Reports ***" << std::endl << std::endl;
     std::cout  << std::endl << "\t\t ~ Eastbound ~ " << std::endl << std::endl;
 
     for(std::list<Stop *>::const_iterator it = CC_EB_stops_list.begin(); it != CC_EB_stops_list.end(); it++) {
-      (*it)->Report(/*std::cout*/);
+      (*it)->Report(std::cout);
     }
 
     std::cout  << std::endl << "\t\t ~ Westbound ~ " << std::endl << std::endl;
     for(std::list<Stop *>::const_iterator it = CC_WB_stops_list.begin(); it != CC_WB_stops_list.end(); it++) {
-      (*it)->Report(/*std::cout*/);
+      (*it)->Report(std::cout);
     }
 
     std::cout << std::endl << std::endl;

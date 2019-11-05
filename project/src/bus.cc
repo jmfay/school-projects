@@ -34,12 +34,12 @@ void Bus::Update() { //using common Update format
   Move();
 }
 
-void Bus::Report() {
-  std::cout << "Name: " << name_ << std::endl;
-  std::cout << "Speed: " << speed_ << std::endl;
-  std::cout << "Distance to next stop: " << distance_remaining_ << std::endl;
-  std::cout << "\tPassengers (" << passengers_.size() << "): " << std::endl;
+void Bus::Report(std::ostream& out) {
+  out << "Name: " << name_ << std::endl;
+  out << "Speed: " << speed_ << std::endl;
+  out << "Distance to next stop: " << distance_remaining_ << std::endl;
+  out << "\tPassengers (" << passengers_.size() << "): " << std::endl;
   for (std::list<Passenger *>::iterator it = passengers_.begin(); it != passengers_.end(); it++) {
-    (*it)->Report();
+    (*it)->Report(out);
   }
 }
