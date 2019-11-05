@@ -23,7 +23,7 @@ class Route {
         PassengerGenerator *);
   Route * Clone();
   void Update();
-  void Report(/*std::ostream&*/);
+  void Report(std::ostream&);
   //bool IsAtEnd() const;
   //void NextStop();  // Change destination_stop_ to next stop
   //Stop * GetDestinationStop() const;    // Get pointer to next stop

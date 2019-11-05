@@ -27,7 +27,7 @@ class Passenger {  // : public Reporter {
   int GetTotalWait() const;
   bool IsOnBus() const;
   int GetDestination() const;
-  void Report() const;
+  void Report(std::ostream&) const;
  private:
   std::string name_;
   int destination_stop_id_;

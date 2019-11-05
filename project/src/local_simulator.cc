@@ -29,7 +29,7 @@ bool LocalSimulator::Update() {
   std::cout << " ~~~~~~~~~~~~~" << std::endl;
 
   pass_->Update();
-  pass_->Report();
+  pass_->Report(std::cout);
 
   return true;
 }
