@@ -35,6 +35,7 @@ bool Bus::IsTripComplete(){
 //}
 
 void Bus::Update() { //using common Update format
+  Move();
   for (std::list<Passenger *>::iterator it = passengers_.begin();
   it != passengers_.end(); it++) {
     (*it)->Update();
