@@ -2,3 +2,5 @@ build
 *.o
 *.exe
 *.out
+docs/html
+docs/latex
