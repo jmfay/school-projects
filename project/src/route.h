@@ -27,7 +27,7 @@ class Route {
   bool IsAtEnd();
   void NextStop();  // Change destination_stop_ to next stop
   Stop * GetDestinationStop();    // Get pointer to next stop
-  //double GetTotalRouteDistance() const;
+  // double GetTotalRouteDistance() const;
   double GetNextStopDistance();
  private:
   int GenerateNewPassengers();       // generates passengers on its route
