@@ -10,18 +10,22 @@ Stop::Stop(int id, double longitude, double latitude) : id_(id),
   // no initialization of list of passengers necessary
 }
 
-void Stop::LoadPassengers(Bus * bus) {
+int Stop::LoadPassengers(Bus * bus) {
     // loading some passengers onto a bus while passengers still at stop
+    int loaded = 0;
     while (!(passengers_.empty())) {
-      // double checks to make sure bus isn't full (returns false if at
+      // double checks to make sure bus isn't full (returns count if at
       // max capacity)
       if (bus->LoadPassenger(passengers_.front())) {
         passengers_.front()->GetOnBus();
         passengers_.pop_front();
+        loaded++;
       } else {
-          return;
+          return loaded;
       }
     }
+    // returns count if stop runs out of passengers to give
+    return loaded;
   }
 
 
