@@ -1,7 +1,9 @@
+// Copyright 2019 fayxx092
 #include "src/bus.h"
 #include "src/stop.h"
 
-Bus::Bus(std::string name, Route * out, Route * in, int capacity, double speed) {
+Bus::Bus(std::string name, Route * out, Route * in, int capacity,
+   double speed) {
   name_ = name;
   outgoing_route_ = out;
   incoming_route_ = in;
@@ -10,9 +12,9 @@ Bus::Bus(std::string name, Route * out, Route * in, int capacity, double speed) 
   distance_remaining_ = 0;
 }
 
-
+// return false if bus is full, else add passenger pointer to passengers_
 bool Bus::LoadPassenger(Passenger * new_passenger) {
-  if (passengers_.size() == passenger_max_capacity_){
+  if (passengers_.size() == passenger_max_capacity_) {
     return false;
   }
   passengers_.push_back(new_passenger);
@@ -34,23 +36,23 @@ bool Bus::IsRouteComplete() {
 }
 
 // checks if outgoing route and incoming route are complete
-bool Bus::IsTripComplete(){
+bool Bus::IsTripComplete() {
   return (IsRouteComplete() && incoming_route_->IsAtEnd());
 }
 
 
-//bool Refuel() {
-//  //This may become more complex in the future
-//  fuel_ = max_fuel_;
+// bool Refuel() {
+//   This may become more complex in the future
+//   fuel_ = max_fuel_;
 //}
 
-void Bus::Update() { //using common Update format
-
+// using common Update format
+void Bus::Update() {
   // bus has reached a stop
-  if (Move() == false){
+  if (Move() == false) {
     // bus still on outgoing route, need to prepare load/unload and figure out
     // the next stop
-    if(!IsRouteComplete()) {
+    if (!IsRouteComplete()) {
       Stop * cursorStop = outgoing_route_->GetDestinationStop();
 
       // check for passengers that need to get off
@@ -58,7 +60,7 @@ void Bus::Update() { //using common Update format
       it != passengers_.end(); it++) {
         if ((*it)->GetDestination() == cursorStop->GetId()) {
           Passenger * departing_passenger = *it;
-          //departing_passenger->Report();
+          // departing_passenger->Report();
 
         // When removing the passenger, the iterator gets incremented to the
         //  next element.
@@ -73,8 +75,9 @@ void Bus::Update() { //using common Update format
       // load passengers at stop and set new distance to next stop
       cursorStop->LoadPassengers(this);
       distance_remaining_ = outgoing_route_->GetNextStopDistance();
-    }
-    else if (!IsTripComplete()){
+
+    // bus on incoming route, but trip is not complete yet
+    } else if (!IsTripComplete()) {
       Stop * cursorStop = incoming_route_->GetDestinationStop();
 
       // check for passengers that need to get off
@@ -82,7 +85,7 @@ void Bus::Update() { //using common Update format
       it != passengers_.end(); it++) {
         if ((*it)->GetDestination() == cursorStop->GetId()) {
           Passenger * departing_passenger = *it;
-          //departing_passenger->Report();
+          // departing_passenger->Report();
           it = passengers_.erase(it);
           it--;
           delete departing_passenger;
@@ -90,10 +93,9 @@ void Bus::Update() { //using common Update format
       }
       cursorStop->LoadPassengers(this);
       distance_remaining_ = incoming_route_->GetNextStopDistance();
-    }
-    // else statement hit when bus completed trip
-    // TODO: delete bus? keep updating passengers?
-    else {
+    } else {
+      // else statement hit when bus completed trip
+      // TODO(fayxx092): delete bus? keep updating passengers?
     }
   }
 
@@ -109,7 +111,8 @@ void Bus::Report(std::ostream& out) {
   out << "Speed: " << speed_ << std::endl;
   out << "Distance to next stop: " << distance_remaining_ << std::endl;
   out << "\tPassengers (" << passengers_.size() << "): " << std::endl;
-  for (std::list<Passenger *>::iterator it = passengers_.begin(); it != passengers_.end(); it++) {
+  for (std::list<Passenger *>::iterator it = passengers_.begin();
+    it != passengers_.end(); it++) {
     (*it)->Report(out);
   }
 }

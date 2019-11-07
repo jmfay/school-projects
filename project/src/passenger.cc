@@ -15,11 +15,11 @@ Passenger::Passenger(int destination_stop_id, std::string name): name_(name),
   count_++;
 }
 
+// increase passenger wait_time depending on where they're at
 void Passenger::Update() {
-  if (IsOnBus()){
+  if (IsOnBus()) {
     time_on_bus_++;
-  }
-  else{
+  } else {
     wait_at_stop_++;
   }
 }
@@ -34,12 +34,13 @@ int Passenger::GetTotalWait() const {
 }
 
 bool Passenger::IsOnBus() const {
-  if (time_on_bus_ > 0){
+  if (time_on_bus_ > 0) {
     return true;
   }
   return false;
 }
 
+// used to compare to stop id when bus is at a stop
 int Passenger::GetDestination() const {
   return destination_stop_id_;
 }

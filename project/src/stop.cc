@@ -49,7 +49,8 @@ int Stop::GetId() const {
 void Stop::Report(std::ostream& out) const {
   out << "ID: " << id_ << std::endl;
   out << "Passengers waiting: " << passengers_.size() << std::endl;
-  for(std::list<Passenger *>::const_iterator it = passengers_.begin(); it != passengers_.end(); it++) {
+  for (std::list<Passenger *>::const_iterator it = passengers_.begin();
+    it != passengers_.end(); it++) {
     (*it)->Report(out);
   }
 }
