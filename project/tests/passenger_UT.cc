@@ -22,6 +22,7 @@ class PassengerTests : public ::testing::Test {
  protected:
     Passenger* passenger;
     Passenger* waitPassenger;
+    Passenger* passenger3;
 
   virtual void SetUp() {
     passenger = new Passenger();
