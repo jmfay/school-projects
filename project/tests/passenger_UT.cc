@@ -53,19 +53,19 @@ TEST_F(PassengerTests, stopIdTest) {
 }
 
 TEST_F(PassengerTests, updateTest) {
-    waitPassenger.Update();
-    waitPassenger.Update();
-    waitPassenger.GetOnBus();
-    waitPassenger.Update();
-    EXPECT_EQ(waitPassenger.GetTotalWait(), 3);
+    waitPassenger->Update();
+    waitPassenger->Update();
+    waitPassenger->GetOnBus();
+    waitPassenger->Update();
+    EXPECT_EQ(waitPassenger->GetTotalWait(), 3);
 }
 
 TEST_F(PassengerTests, TotalWaitTest) {
-	passenger3.Update();
-	passenger3.Update();
-	passenger3.Update();
-	passenger3.Update();
-	passenger3.GetOnBus();
-	passenger3.Update();
-	EXPECT_EQ(passenger3.GetTotalWait(), 5);
+	passenger3->Update();
+	passenger3->Update();
+	passenger3->Update();
+	passenger3->Update();
+	passenger3->GetOnBus();
+	passenger3->Update();
+	EXPECT_EQ(passenger3->GetTotalWait(), 5);
 }
