@@ -51,7 +51,7 @@ class Stop {
   *
   * @param[in] Passenger* to be added to stop's passenger container
   *
-  * @return 1 after passenger is added to stop's containerS
+  * @return 1 after passenger is added to stop's containers
   */
   int AddPassengers(Passenger *);
   /**
