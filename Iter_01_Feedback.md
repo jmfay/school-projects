@@ -1,10 +1,10 @@
 ### Feedback for Iteration 1
 
-Run on November 06, 22:33:27 PM.
+Run on November 07, 21:25:23 PM.
 
 <hr>
 
-This feedback is being batched and will run every few hours. Note that these feedback tests are a *work in progress* and will be updated to contain more tests as they are developed. Check back periodically for more feedback.
+This feedback is being batched and will run every few hours. Note that these feedback tests are a *work in progress* and will likely be updated to contain more tests as they are developed. Check back periodically for more feedback. Take note that these tests are _incredibly slow_ because of the time it takes to compile 4 executables.
 
 <hr>
 
@@ -58,7 +58,6 @@ cd gtest; make
 make[2]: Entering directory '/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/gtest'
 git clone https://github.com/google/googletest.git src
 Cloning into 'src'...
-Checking out files:  85% (225/263)   Checking out files:  86% (227/263)   Checking out files:  87% (229/263)   Checking out files:  88% (232/263)   Checking out files:  89% (235/263)   Checking out files:  90% (237/263)   Checking out files:  91% (240/263)   Checking out files:  92% (242/263)   Checking out files:  93% (245/263)   Checking out files:  94% (248/263)   Checking out files:  95% (250/263)   Checking out files:  96% (253/263)   Checking out files:  97% (256/263)   Checking out files:  98% (258/263)   Checking out files:  99% (261/263)   Checking out files: 100% (263/263)   Checking out files: 100% (263/263), done.
 mkdir -p build
 cd build; CC=/soft/gcc/7.1.0/Linux_x86_64/bin/gcc CXX=/soft/gcc/7.1.0/Linux_x86_64/bin/g++ cmake ../src -DCMAKE_INSTALL_PREFIX=/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install
 -- The C compiler identification is GNU 7.1.0
@@ -128,31 +127,31 @@ Install the project...
 -- Install configuration: ""
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-function-mockers.h.pump
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-more-actions.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-function-mockers.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-matchers.h.pump
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-nice-strict.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-spec-builders.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-actions.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-cardinalities.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-matchers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-function-mockers.h.pump
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-actions.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-matchers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-spec-builders.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-function-mocker.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-actions.h.pump
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-more-matchers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-actions.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-pp.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-port.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-internal-utils.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/gmock-port.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/README.md
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/gmock-matchers.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/gmock-generated-actions.h.pump
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/gmock-generated-actions.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/custom/gmock-matchers.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-internal-utils.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-port.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/internal/gmock-pp.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-matchers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-nice-strict.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-generated-actions.h.pump
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-more-actions.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-cardinalities.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-function-mocker.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gmock/gmock-more-matchers.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/libgmock.a
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/libgmock_main.a
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/pkgconfig/gmock.pc
@@ -163,31 +162,31 @@ Install the project...
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/cmake/GTest/GTestConfig.cmake
 -- Up-to-date: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest_prod.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-typed-test.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-printers.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-message.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-test-part.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-death-test.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest_pred_impl.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-param-test.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-param-util.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-string.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-type-util.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-internal.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-filepath.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-port-arch.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-port.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-death-test-internal.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-param-util.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-type-util.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom/README.md
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom/gtest-printers.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom/gtest.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom/gtest-port.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-string.h
--- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/gtest-internal.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-test-part.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-spi.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-message.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-death-test.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-param-test.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-matchers.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest_prod.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest_pred_impl.h
+-- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest-typed-test.h
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/libgtest.a
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/libgtest_main.a
 -- Installing: /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/lib/pkgconfig/gtest.pc
@@ -283,15 +282,30 @@ make: *** [../build/obj/tests/passenger_UT.o] Error 1
 
 
 
-+ Fail: Check that file "../build/bin/unittest" exists.
++ Skip: Check that file "../build/bin/unittest" exists.
 
-     "../build/bin/unittest" not found.
+  This test was not run because of an earlier failing test.
 
 + Pass: Change into directory "..".
 
-+ Pass: Resetting repo...
+
+#### Style Tests
+
++ Pass: Change into directory "src/".
+
++ Pass: Check that file "mainpage.h" exists.
+
++ Pass: Ignoring mainpage.h
 
 
+
++ Pass: Grading style compliancy errors (Found: 0 errors)
+
++ Pass: Restoring mainpage.h
+
+
+
++ Pass: Change into directory "..".
 
 
 #### Doxygen Tests
@@ -305,19 +319,23 @@ make: *** [../build/obj/tests/passenger_UT.o] Error 1
 
 + Pass: Check that file/directory "latex" does not exist.
 
-+ Fail: Check that file "Doxyfile" exists.
++ Pass: Check that file "Doxyfile" exists.
 
-     "Doxyfile" not found.
++ Pass: Generating documentation by running doxygen
 
-+ Fail: Generating documentation by running doxygen
++ Pass: Check that directory "html" exists.
 
-+ Fail: Check that directory "html" exists.
++ Pass: Removing generated html and/or latex directories...
 
-     "html" not found.
+
+
++ Pass: Change into directory "..".
 
 + Pass: Change into directory "..".
 
-+ Pass: Change into directory "..".
++ Pass: Resetting repo...
+
+
 
 
 ### Basic Tests on Master
@@ -352,70 +370,7 @@ make: *** [../build/obj/tests/passenger_UT.o] Error 1
 
 
 
-+ Fail: Check that make compiles.
-
-    Make compile fails with errors:.
-<pre>........PROJ MAKEFILE: Making TransitSim.......................................
-cd src; make -j
-make[1]: Entering directory '/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/src'
-==== Auto-Generating Dependencies for ../drivers/transit_sim.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/objdrivers/transit_sim.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/objdrivers/transit_sim.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers ../drivers/transit_sim.cc
-==== Auto-Generating Dependencies for local_simulator.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers local_simulator.cc
-==== Auto-Generating Dependencies for bus.cc. ====
-==== Auto-Generating Dependencies for random_passenger_generator.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/random_passenger_generator.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/random_passenger_generator.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers random_passenger_generator.cc
-==== Auto-Generating Dependencies for passenger.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/bus.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/bus.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers bus.cc
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers passenger.cc
-==== Auto-Generating Dependencies for passenger_factory.cc. ====
-==== Auto-Generating Dependencies for passenger_generator.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_generator.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_generator.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers passenger_generator.cc
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_factory.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_factory.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers passenger_factory.cc
-==== Auto-Generating Dependencies for stop.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/stop.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/stop.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers stop.cc
-==== Auto-Generating Dependencies for route.cc. ====
-g++ -MM -MF /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/route.d -MP -MT /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/route.o -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers route.cc
-==== Compiling passenger.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger.o passenger.cc
-==== Compiling passenger_factory.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_factory.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_factory.o passenger_factory.cc
-==== Compiling bus.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/bus.o. ====
-==== Compiling passenger_generator.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_generator.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/bus.o bus.cc
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/passenger_generator.o passenger_generator.cc
-==== Compiling random_passenger_generator.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/random_passenger_generator.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/random_passenger_generator.o random_passenger_generator.cc
-==== Compiling route.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/route.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/route.o route.cc
-==== Compiling stop.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/stop.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/stop.o stop.cc
-==== Compiling local_simulator.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.o local_simulator.cc
-==== Compiling ../drivers/transit_sim.cc into /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/objdrivers/transit_sim.o. ====
-g++ -fopenmp -W -Wall -Wextra -fdiagnostics-color=always -Wfloat-equal -Wshadow -Wcast-align -Wcast-qual -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wredundant-decls -Wswitch-default -Wsuggest-override -Wstrict-null-sentinel -Wsign-promo -Wold-style-cast -Woverloaded-virtual -Wctor-dtor-privacy -Wno-old-style-cast -Wno-cast-align -g -std=c++11 -c -I.. -I. -I./.. -I../drivers  -c -fPIC -o  /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/objdrivers/transit_sim.o ../drivers/transit_sim.cc
-bus.cc: In member function bool Bus::LoadPassenger(Passenger*):
-bus.cc:13:37: warning: unused parameter new_passenger [-Wunused-parameter]
- bool Bus::LoadPassenger(Passenger * new_passenger) {
-                                     ^~~~~~~~~~~~~
-stop.cc: In member function int Stop::AddPassengers(Passenger*):
-stop.cc:10:37: warning: unused parameter pass [-Wunused-parameter]
- int Stop::AddPassengers(Passenger * pass) {
-                                     ^~~~
-local_simulator.cc: In member function virtual bool LocalSimulator::Update():
-local_simulator.cc:31:9: error: request for member Update in ((LocalSimulator*)this)->LocalSimulator::pass_, which is of pointer type Passenger* (maybe you meant to use -> ?)
-   pass_.Update();
-         ^~~~~~
-local_simulator.cc:32:9: error: request for member Report in ((LocalSimulator*)this)->LocalSimulator::pass_, which is of pointer type Passenger* (maybe you meant to use -> ?)
-   pass_.Report();
-         ^~~~~~
-makefile:87: recipe for target '/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.o' failed
-make[1]: *** [/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/build/obj/transit_sim/local_simulator.o] Error 1
-make[1]: *** Waiting for unfinished jobs....
-make[1]: Leaving directory '/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/project/src'
-makefile:11: recipe for target 'TransitSim' failed
-make: *** [TransitSim] Error 2
-</pre>
++ Pass: Check that make compiles.
 
 
 
@@ -426,32 +381,82 @@ make: *** [TransitSim] Error 2
 + Fail: Check that make compiles.
 
     Make compile fails with errors:.
-<pre>==== Auto-Generating Dependencies for ../src/local_simulator.cc. ====
-g++ -MM -MF ../build/obj/tests/local_simulator.d -MP -MT ../build/obj/tests/local_simulator.o -g -Wall -Wextra -pthread -fprofile-arcs -ftest-coverage -c -I/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include -I.. -I. -isystem/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include   -std=c++11 ../src/local_simulator.cc
-==== Compiling ../src/local_simulator.cc into ../build/obj/tests/local_simulator.o. ====
-g++ -g -Wall -Wextra -pthread -fprofile-arcs -ftest-coverage -c -I/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include -I.. -I. -isystem/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include   -std=c++11  -c -o  ../build/obj/tests/local_simulator.o ../src/local_simulator.cc
-../src/local_simulator.cc: In member function virtual bool LocalSimulator::Update():
-../src/local_simulator.cc:31:9: error: request for member Update in ((LocalSimulator*)this)->LocalSimulator::pass_, which is of pointer type Passenger* (maybe you meant to use -> ?)
-   pass_.Update();
-         ^~~~~~
-../src/local_simulator.cc:32:9: error: request for member Report in ((LocalSimulator*)this)->LocalSimulator::pass_, which is of pointer type Passenger* (maybe you meant to use -> ?)
-   pass_.Report();
-         ^~~~~~
-Makefile:140: recipe for target '../build/obj/tests/local_simulator.o' failed
-make: *** [../build/obj/tests/local_simulator.o] Error 1
+<pre>==== Auto-Generating Dependencies for passenger_UT.cc. ====
+/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -MM -MF ../build/obj/tests/passenger_UT.d -MP -MT ../build/obj/tests/passenger_UT.o -g -Wall -Wextra -pthread -fprofile-arcs -ftest-coverage -c -I/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include -I.. -I. -isystem/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include   -std=c++11 passenger_UT.cc
+==== Compiling passenger_UT.cc into ../build/obj/tests/passenger_UT.o. ====
+/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -g -Wall -Wextra -pthread -fprofile-arcs -ftest-coverage -c -I/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include -I.. -I. -isystem/project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include   -std=c++11  -c -o  ../build/obj/tests/passenger_UT.o passenger_UT.cc
+passenger_UT.cc: In member function virtual void PassengerTests::SetUp():
+passenger_UT.cc:29:3: error: passenger3 was not declared in this scope
+   passenger3 = new Passenger();
+   ^~~~~~~~~~
+passenger_UT.cc:29:3: note: suggested alternative: passenger
+   passenger3 = new Passenger();
+   ^~~~~~~~~~
+   passenger
+passenger_UT.cc: In member function virtual void PassengerTests::TearDown():
+passenger_UT.cc:35:10: error: passenger3 was not declared in this scope
+   delete passenger3;
+          ^~~~~~~~~~
+passenger_UT.cc:35:10: note: suggested alternative: passenger
+   delete passenger3;
+          ^~~~~~~~~~
+          passenger
+passenger_UT.cc: In member function virtual void PassengerTests_updateTest_Test::TestBody():
+passenger_UT.cc:56:19: error: request for member Update in ((PassengerTests_updateTest_Test*)this)->PassengerTests_updateTest_Test::<anonymous>.PassengerTests::waitPassenger, which is of pointer type Passenger* (maybe you meant to use -> ?)
+     waitPassenger.Update();
+                   ^~~~~~
+passenger_UT.cc:57:19: error: request for member Update in ((PassengerTests_updateTest_Test*)this)->PassengerTests_updateTest_Test::<anonymous>.PassengerTests::waitPassenger, which is of pointer type Passenger* (maybe you meant to use -> ?)
+     waitPassenger.Update();
+                   ^~~~~~
+passenger_UT.cc:58:19: error: request for member GetOnBus in ((PassengerTests_updateTest_Test*)this)->PassengerTests_updateTest_Test::<anonymous>.PassengerTests::waitPassenger, which is of pointer type Passenger* (maybe you meant to use -> ?)
+     waitPassenger.GetOnBus();
+                   ^~~~~~~~
+passenger_UT.cc:59:19: error: request for member Update in ((PassengerTests_updateTest_Test*)this)->PassengerTests_updateTest_Test::<anonymous>.PassengerTests::waitPassenger, which is of pointer type Passenger* (maybe you meant to use -> ?)
+     waitPassenger.Update();
+                   ^~~~~~
+In file included from /project/grades/Fall-2019/csci3081/kyllo089/grading-environment/grading-scripts/grading/Iter_01_Feedback/repo-fayxx092/external/install/include/gtest/gtest.h:375:0,
+                 from passenger_UT.cc:15:
+passenger_UT.cc:60:29: error: request for member GetTotalWait in ((PassengerTests_updateTest_Test*)this)->PassengerTests_updateTest_Test::<anonymous>.PassengerTests::waitPassenger, which is of pointer type Passenger* (maybe you meant to use -> ?)
+     EXPECT_EQ(waitPassenger.GetTotalWait(), 3);
+                             ^
+passenger_UT.cc: In member function virtual void PassengerTests_TotalWaitTest_Test::TestBody():
+passenger_UT.cc:64:2: error: passenger3 was not declared in this scope
+  passenger3.Update();
+  ^~~~~~~~~~
+passenger_UT.cc:64:2: note: suggested alternative: passenger
+  passenger3.Update();
+  ^~~~~~~~~~
+  passenger
+Makefile:154: recipe for target '../build/obj/tests/passenger_UT.o' failed
+make: *** [../build/obj/tests/passenger_UT.o] Error 1
 </pre>
 
 
 
-+ Fail: Check that file "../build/bin/unittest" exists.
++ Skip: Check that file "../build/bin/unittest" exists.
 
-     "../build/bin/unittest" not found.
+  This test was not run because of an earlier failing test.
 
 + Pass: Change into directory "..".
 
-+ Pass: Resetting repo...
+
+#### Style Tests
+
++ Pass: Change into directory "src/".
+
++ Pass: Check that file "mainpage.h" exists.
+
++ Pass: Ignoring mainpage.h
 
 
+
++ Pass: Grading style compliancy errors (Found: 0 errors)
+
++ Pass: Restoring mainpage.h
+
+
+
++ Pass: Change into directory "..".
 
 
 #### Doxygen Tests
@@ -465,26 +470,30 @@ make: *** [../build/obj/tests/local_simulator.o] Error 1
 
 + Pass: Check that file/directory "latex" does not exist.
 
-+ Fail: Check that file "Doxyfile" exists.
++ Pass: Check that file "Doxyfile" exists.
 
-     "Doxyfile" not found.
++ Pass: Generating documentation by running doxygen
 
-+ Fail: Generating documentation by running doxygen
++ Pass: Check that directory "html" exists.
 
-+ Fail: Check that directory "html" exists.
++ Pass: Removing generated html and/or latex directories...
 
-     "html" not found.
+
+
++ Pass: Change into directory "..".
 
 + Pass: Change into directory "..".
 
-+ Pass: Change into directory "..".
++ Pass: Resetting repo...
+
+
 
 
 ### Git Usage
 
 + Pass: Run git ls-remote gather all branches in repo
 
-		54937413f32bc6d911e7caa68bc045d0a6e56e69	refs/heads/devel
+		4883c5dfce19431fec97ff70f0ee5014cad653b6	refs/heads/devel
 
 		15f185ed80cae30ab560c24221a1286282cb5e0f	refs/heads/fix/01-compilation-errors
 
@@ -500,7 +509,9 @@ make: *** [../build/obj/tests/local_simulator.o] Error 1
 
 		389043e85550ea6d492bd7540b16a8e90ab1757f	refs/heads/fix/07-google-styling
 
-		2083ac97da31a9812d3228870afae5122df1fe40	refs/heads/master
+		b0b8372a49a8dfd9c0bbffbecf5fb331cfda6c41	refs/heads/fix/08-doxygen-big4-documentation
+
+		e6bbe70e1158f13b4b75e645ce626327c58b86d3	refs/heads/master
 
 
 
