@@ -1,6 +1,6 @@
 ### Feedback for Iter 02
 
-Run on November 13, 22:36:33 PM.
+Run on November 14, 00:05:18 AM.
 
 
 ### Basic Tests on Devel
@@ -28,16 +28,11 @@ This feedback is being batched and will run every few hours. Note that these fee
 
 + Pass: Change into directory "project/src".
 
-+ Fail: Compiling capture_transit_sim target of the src/ makefile...
-
-<pre>make: *** No rule to make target 'capture_transit_sim'.  Stop.
-</pre>
++ Pass: Compiling capture_transit_sim target of the src/ makefile...
 
 
 
-+ Skip: Check that file "../build/bin/capture_transit_sim" exists.
-
-  This test was not run because of an earlier failing test.
++ Pass: Check that file "../build/bin/capture_transit_sim" exists.
 
 
 #### Style Checking All src/ Files
@@ -59,7 +54,7 @@ This feedback is being batched and will run every few hours. Note that these fee
 
 + Pass: Run git ls-remote gather all branches in repo
 
-		5d34adecc975db2484563acddd0dbeebbb4aeb3c	refs/heads/devel
+		34246b1f0a3d5d8c9772905dfde3bc8efa5885aa	refs/heads/devel
 
 		15f185ed80cae30ab560c24221a1286282cb5e0f	refs/heads/fix/01-compilation-errors
 
@@ -77,7 +72,9 @@ This feedback is being batched and will run every few hours. Note that these fee
 
 		ca8b11343d395df0696f3d8f39dd1d912c0312d5	refs/heads/fix/08-doxygen-big4-documentation
 
-		691d7302136de144b6e6324c73645cbca732dff2	refs/heads/master
+		a7626a436355d65787ccc510f90c3ba73b3dd5d1	refs/heads/fix/13-iteration2-preliminary1
+
+		f2ab9a31dfd09847e15cdb545903d5c66a2dd2a0	refs/heads/master
 
 
 
