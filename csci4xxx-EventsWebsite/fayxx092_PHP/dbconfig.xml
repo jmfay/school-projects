@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dbconfig>
+    <host>HOST_HERE</host>
+    <user>USERNAME_HERE</user>
+    <password>PASSWORD_HERE</password>
+    <database>DATABASE_HERE</database>
+    <port>PORT_HERE</port>
+</dbconfig>

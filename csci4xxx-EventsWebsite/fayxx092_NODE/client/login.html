@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style type="text/css">
+      .jumbotron,
+      div,
+      h3 {
+        text-align: center;
+      }
+      #loginB {
+        margin: auto;
+      }
+      #errorBanner {
+        display: none;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron" style="background: DarkSeaGreen !important">
+      <h1>Login Page</h1>
+      <p>Please enter your username and password (case sensitive)</p>
+      <br />
+    </div>
+    <div class="container">
+      <div class="alert alert-danger" role="alert" id="errorBanner">
+        Incorrect username/password
+      </div>
+      <br />
+      <form id="myForm" name="myForm">
+        <div class="form-group">
+          <label for="login">Username:</label><br />
+          <input type="text" id="login" name="login" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label><br />
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button id="loginB" type="submit" class="btn btn-default">Log In</button>
+      </form>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('#myForm').submit(function (event) {
+          event.preventDefault();
+          let login = $('#login').val();
+          let password = $('#password').val();
+          $.post('/sendLoginDetails', { login: login, password: password }, function (data) {
+            console.log(data);
+            if (data.status === 'success') {
+              // Re-direct to events page,
+              window.location.href = 'events';
+            } else {
+              $('#errorBanner').css('display', 'block');
+              //alert("Incorrect user/password");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

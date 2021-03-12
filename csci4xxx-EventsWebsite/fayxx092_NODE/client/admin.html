@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      #errorBanner {
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/"><b>Home</b></a>
+          </li>
+          <li>
+            <a href="events"><b>Events</b></a>
+          </li>
+          <li>
+            <a href="addEvent"><b>Add Event</b></a>
+          </li>
+          <li>
+            <a href="stock"><b>Stock Page</b></a>
+          </li>
+          <li>
+            <a href="admin"><b>Admin</b></a>
+          </li>
+          <li>
+            <a href="logout">
+              <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-text"><span id="userWelcome"></span></li>
+        </ul>
+      </div>
+    </nav>
+    <br /><br />
+
+    <div class="container">
+      <div class="alert alert-danger" role="alert" id="errorBanner"></div>
+      <button class="glyphicon glyphicon-plus" onclick="beginNewUser()"></button>
+      <table class="table table-hover table-bordered" id="userTable">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Login</th>
+            <th scope="col">New Password</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript">
+      // place fields into selected row with old info,
+      // allowing user to update name,login,or password
+      function editUser(old_id, old_name, old_login, old_password) {
+        return function () {
+          let tr = $(this).parent().parent(),
+            tds = tr.children();
+          let tdName = tds[1],
+            tdLogin = tds[2],
+            tdPassword = tds[3],
+            tdBtns = tds[4];
+
+          let saveBtn = $('<span></span>')
+            .attr('class', 'glyphicon glyphicon-ok')
+            .click(updateUser());
+          let undoBtn = $('<span></span>')
+            .attr('class', 'glyphicon glyphicon-remove')
+            .click(cancelEdit(old_name, old_login, old_password, $(tdBtns).clone(true)));
+
+          $(tdName).replaceWith(
+            $(`<td><input type='text' id='txtName' value='${$(tdName).text()}'></td>`)
+          );
+          $(tdLogin).replaceWith(
+            $(`<td><input type='text' id='txtLogin' value='${$(tdLogin).text()}'></td>`)
+          );
+          $(tdPassword).replaceWith(
+            $(`<td><input type='text' id='txtPassword' value='${$(tdPassword).text()}'></td>`)
+          );
+          $(tdBtns).replaceWith($('<td></td>').append(saveBtn).append('&emsp;').append(undoBtn));
+        };
+      }
+
+      function updateUser() {
+        return function () {
+          let tr = $(this).parent().parent(),
+            tds = tr.children();
+          let tdId = tds[0],
+            tdName = tds[1],
+            tdLogin = tds[2],
+            tdPassword = tds[3];
+          let valId = $(tdId).html(),
+            valName = $(tdName).children('input').val(),
+            valLogin = $(tdLogin).children('input').val(),
+            valPassword = $(tdPassword).children('input').val();
+
+          let emptyMessage = [];
+          if (!valName) emptyMessage.push('Name field is required. ');
+          if (!valLogin) emptyMessage.push('Login field is required. ');
+
+          emptyMessage = emptyMessage.join(' \n ');
+          if (emptyMessage) {
+            emptyMessage = `Error: missing required information.${emptyMessage}`;
+            showError(emptyMessage);
+            return;
+          } else {
+            hideError();
+          }
+
+          $.post('adminUpdateUser', {
+            id: valId,
+            name: valName,
+            login: valLogin,
+            password: valPassword,
+          }).done(function (data) {
+            console.log(data);
+            if (data.flag == true) {
+              tr.replaceWith(
+                userRowInTable(
+                  $(tdId).text(),
+                  $(tdName).children('input').val(),
+                  $(tdLogin).children('input').val()
+                )
+              );
+              hideError();
+            } else {
+              showError('This login is used by another user.');
+            }
+          });
+        };
+      }
+
+      // replace edit row with old, unmodified credentials
+      function cancelEdit(old_name, old_login, old_pass, old_btns) {
+        return function () {
+          let tr = $(this).parent().parent(),
+            tds = tr.children();
+          let tdName = tds[1],
+            tdLogin = tds[2],
+            tdPassword = tds[3],
+            tdBtns = tds[4];
+
+          $(tdName).html(old_name);
+          $(tdLogin).html(old_login);
+          $(tdPassword).html(old_pass);
+          $(tdBtns).replaceWith(old_btns);
+        };
+      }
+
+      // Attempts to delete targeted user from database,
+      // reporting failure to user if needed
+      function deleteUser(acc_login) {
+        return function () {
+          $.post('adminRemoveUser', { login: acc_login }).done(function (data) {
+            if (data.status === 'self') {
+              showError('Cannot delete logged in User!');
+            } else if (data.status === 'success') {
+              hideError();
+              $('#userTableBody').html('');
+              getUserTable();
+            } else if (data.status === 'sql fail') {
+              showError('SQL Query Failure');
+            } else if (data.status === 'no user') {
+              showError('No such user registered');
+            } else {
+              showError('Unknown error while trying to delete user');
+            }
+          });
+        };
+      }
+
+      // create input row for user to fill out new user info
+      function beginNewUser() {
+        var formRow = `
+        <tr id = "formRow">
+          <td></td>
+            <td>
+                <input type="text" id="newName" name="newName" required>
+            </td>
+            <td>
+                <input type="text" id="newLogin" name="newLogin" required />
+            </td>
+            <td>
+                <input type="text" id="newPassword" name="newPassword" required />
+            </td>
+            <td>
+                <a onclick="processNewUser();">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </a>
+                <a onclick="cancelNew();">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </td>
+        </tr>
+        `;
+        $('#userTableBody').append(formRow);
+      }
+
+      // remove input row
+      function cancelNew() {
+        $('#formRow').remove();
+        hideError();
+      }
+
+      // check for valid inputs, then make request to server
+      // and communicate failure to user if necessary
+      function processNewUser() {
+        let newName = $('#newName').val(),
+          newLogin = $('#newLogin').val(),
+          newPassword = $('#newPassword').val();
+        if (!newName || !newLogin || !newPassword) {
+          showError('One or more empty strings. Cannot create user.');
+          return;
+        }
+        $.post(
+          'adminNewUser',
+          { newName: newName, newLogin: newLogin, newPassword: newPassword },
+          function (data) {
+            if (data.status === 'success') {
+              hideError();
+              $('#userTableBody').html('');
+              getUserTable();
+            } else if (data.status === 'exists') {
+              showError('This login is used by another user.');
+            } else if (data.status === 'sql fail') {
+              showError('SQL Query Failure');
+            } else {
+              showError('Unknown error while trying to create user');
+            }
+          }
+        );
+      }
+
+      // creates a table row for a specific user
+      // takes user's id, name, and login name as arguments
+      function userRowInTable(id, name, login) {
+        let updateBtn = $('<span></span>')
+          .attr('class', 'glyphicon glyphicon-pencil')
+          .click(editUser(id, name, login, ''));
+        let deleteBtn = $('<span></span>')
+          .attr('class', 'glyphicon glyphicon-trash')
+          .click(deleteUser(login));
+
+        let row = $('<tr></tr>')
+          .append(`<td>${id}</td>`)
+          .append(`<td>${name}</td>`)
+          .append(`<td>${login}</td>`)
+          .append('<td></td>')
+          .append($('<td></td>').append(updateBtn).append('&emsp;').append(deleteBtn));
+
+        return row;
+      }
+
+      // makes AJAX request to server for list of all users
+      // and begins process of building table to display
+      function getUserTable() {
+        $.get('adminGetUsers').done(function (response) {
+          for (let user of response) {
+            //console.log(user);
+            $('#userTableBody').append(userRowInTable(user.acc_id, user.acc_name, user.acc_login));
+          }
+        });
+      }
+      // Call function on window load
+      $(getUserTable());
+
+      function showError(message) {
+        $('#errorBanner').css('display', 'block');
+        $('#errorBanner').text(message);
+      }
+
+      function hideError() {
+        $('#errorBanner').css('display', 'none');
+      }
+    </script>
+    <script src="client/template.js"></script>
+  </body>
+</html>
